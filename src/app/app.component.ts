@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CompotasComponent } from "./projects/compotas/compotas.component";
 import { NavbarComponent } from "./componentes/navbar/navbar.component";
+import { PrincipalComponent } from "./componentes/principal/principal.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, CompotasComponent, NavbarComponent],
+  imports: [RouterOutlet, FormsModule, CompotasComponent, NavbarComponent, PrincipalComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

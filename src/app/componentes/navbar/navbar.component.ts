@@ -8,7 +8,7 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  title = 'José Beltrán';
+  title = 'World...';
 
   isFixed = false;
 
