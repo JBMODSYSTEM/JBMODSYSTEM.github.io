@@ -1,53 +1,54 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
-}
+  }
   
-header {
+  header {
     background-color: #333;
     color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-  
-main {
     padding: 20px;
-}
+    text-align: center;
+  }
   
-table {
+  main {
+    padding: 20px;
+  }
+  
+  table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-}
+  }
   
-table, th, td {
+  table, th, td {
     border: 1px solid #ddd;
     padding: 8px;
-}
+  }
   
-th {
+  th {
     background-color: #f2f2f2;
-}
+  }
   
-button {
+  button {
     background-color: #4CAF50;
     color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
     margin-top: 10px;
-}
+    border-radius: 20px; /* Botones redondeados */
+  }
   
-button:hover {
+  button:hover {
     background-color: #45a049;
-}
-
-.button-container {
-    display: flex;
-    justify-content: flex-end;
-}
+  }
   
-.modal {
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .modal {
     display: flex; /* Cambia de block a flex */
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -81,5 +82,49 @@ button:hover {
       display: flex;
       justify-content: space-between;
     }
-}
+  }
   
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .table {
+    width: auto;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espacio entre los elementos del formulario */
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .form-control {
+    width: 80%;
+    max-width: 350px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e6ffe6; /* Verde pastel */
+    transition: border-color 0.3s;
+  
+    &:focus {
+      border-color: #4CAF50; /* Verde más oscuro al enfocar */
+      outline: none;
+    }
+  }
+  
+  .rounded-button {
+    border-radius: 20px; /* Botones redondeados */
+  }

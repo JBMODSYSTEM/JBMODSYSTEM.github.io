@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CompotasComponent } from "./projects/compotas/compotas.component";
@@ -13,5 +13,10 @@ import { PrincipalComponent } from "./componentes/principal/principal.component"
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  scrolled = false;
 
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    this.scrolled = window.pageYOffset > 0;
+  }
 }

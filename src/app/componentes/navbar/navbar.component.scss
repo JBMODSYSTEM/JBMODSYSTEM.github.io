@@ -28,6 +28,14 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que el navbar esté por encima del contenido */
+    background-color: white; /* Fondo para que se vea sobre cualquier contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
   }
   
   h1 {
@@ -51,22 +59,22 @@
     width: 100%;
     min-height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     padding: 1rem;
     box-sizing: inherit;
     position: relative;
-    transition: all 0.3s ease-in-out; // Añadir transición para animación
+    // transition: all 0.3s ease-in-out; // Añadir transición para animación
   
-    &.fixed {
-      position:sticky;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: white;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+    // &.fixed {
+    //   position:sticky;
+    //   top: 0;
+    //   left: 0;
+    //   width: 50%;
+    //   background-color: white;
+    //   // z-index: 1000;
+    //   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    // }
   }
   
   .angular-logo {

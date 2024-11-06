@@ -1,0 +1,18 @@
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; // Espacio entre las imágenes
+    padding: 20px;
+  
+    .hover-image {
+      width: 450px;
+    //   height: 250px;
+      transition: transform 0.3s ease-in-out;
+  
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
