@@ -2,8 +2,8 @@ import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CompotasComponent } from "./projects/compotas/compotas.component";
-import { NavbarComponent } from "./componentes/navbar/navbar.component";
-import { PrincipalComponent } from "./componentes/principal/principal.component";
+import { NavbarComponent } from "./components/navbar/navbar.component";
+import { PrincipalComponent } from "./components/principal/principal.component";
 
 @Component({
   selector: 'app-root',
