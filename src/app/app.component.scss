@@ -1,8 +1,8 @@
 .content-wrapper {
-    margin-top: 10%; /* Espacio inicial bajo el navbar */
+    // margin-top: 10%; /* Espacio inicial bajo el navbar */
   
     &.scrolled {
-      margin-top: 10%; /* Reduce el espacio al hacer scroll */
+      // margin-top: 10%; /* Reduce el espacio al hacer scroll */
       transition: margin-top 0.3s ease; /* Transición suave */
     }
   }
