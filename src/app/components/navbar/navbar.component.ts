@@ -1,22 +1,19 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
+const MATERIAL_MODULES = [MatToolbarModule, MatIconModule, MatButtonModule];
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [ RouterModule, CommonModule, MATERIAL_MODULES],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  constructor(private router: Router) {}
-
-  navigateTo(route: string): void {
-    this.router.navigate([route]);
-  }
-  title = 'World...';
-
 
 }
