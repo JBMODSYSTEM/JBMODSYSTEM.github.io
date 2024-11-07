@@ -1,2 +1,10 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
+<section>
+    <mat-card>
+        <mat-card-content>
+            <app-toolbar (onNewContactEvent)="onClickNewContact()" class="fixed-toolbar"/>
+            <router-outlet/>
+        </mat-card-content>
+    </mat-card>
+</section>
+
+

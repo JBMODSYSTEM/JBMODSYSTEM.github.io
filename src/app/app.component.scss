@@ -1,9 +1,11 @@
-.content-wrapper {
-    // margin-top: 10%; /* Espacio inicial bajo el navbar */
-  
-    &.scrolled {
-      // margin-top: 10%; /* Reduce el espacio al hacer scroll */
-      transition: margin-top 0.3s ease; /* Transición suave */
-    }
-  }
-  
+.fixed-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; // Asegúrate de que el toolbar esté en el frente
+}
+
+mat-card-content {
+  margin-top: 64px; // Ajusta este valor según la altura de tu toolbar
+}

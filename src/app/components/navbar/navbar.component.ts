@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,5 +15,9 @@ const MATERIAL_MODULES = [MatToolbarModule, MatIconModule, MatButtonModule];
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  onNewContactEvent = output<void>();
 
+  emitClick(): void {
+    this.onNewContactEvent.emit();
+  }
 }
