@@ -16,18 +16,19 @@ import { MatToolbarModule } from '@angular/material/toolbar';
           <span>Home</span>
         </a>
       </div>
+      <span class="spacer"></span>
       <div class="right-section">
-        <a routerLink="/compotas" mat-button>
-          <mat-icon>info</mat-icon>
-          <span>About</span>
-        </a>
         <a routerLink="/contact" mat-button>
           <mat-icon>contacts</mat-icon>
           <span>Contact</span>
         </a>
+        <a routerLink="/" mat-button>
+          <mat-icon>info</mat-icon>
+          <span>About</span>
+        </a>
         <a mat-button (click)="emitClick()">
           <mat-icon>add_box</mat-icon>
-          <span>New</span>
+          <span>Comentarios</span>
         </a>
       </div>
     </mat-toolbar>

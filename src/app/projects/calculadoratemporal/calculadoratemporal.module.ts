@@ -6,11 +6,12 @@ import { CalculadoratemporalComponent } from './calculadoratemporal.component';
 
 
 @NgModule({
-  declarations: [  ],
+  declarations: [
+
+  ],
   imports: [
     CommonModule,
-    ReactiveFormsModule,
-    CalculadoratemporalComponent
+    ReactiveFormsModule
   ]
 })
 export class CalculadoratemporalModule { }

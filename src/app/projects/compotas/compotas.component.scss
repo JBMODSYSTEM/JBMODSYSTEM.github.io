@@ -90,7 +90,16 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    height: 89vh;
   }
+
+//   .calculadora-content{
+//     // display: flex;
+//     // justify-content: center;
+//     // align-items: center;
+//     // height: 89vh; // Altura completa de la ventana
+//     // background-color: #f9f9f9; // Color de fondo opcional
+// }
   
   .table {
     width: auto;
@@ -111,7 +120,7 @@ body {
   }
   
   .form-control {
-    width: 80%;
+    width: 90%;
     max-width: 350px;
     padding: 5px;
     border: 1px solid #ccc;

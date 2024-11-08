@@ -1,1 +1,89 @@
-<p>calculadoratemporal works!</p>
+<div class="body">
+    <div class="calculadora-content">
+        <mat-card class="calculadora-goles" >
+            <h4 class="firsttime2"> Segundo Tiempo </h4>
+            <p class="conteoprogresivo">Tiempo: {{showTime2}}</p>
+            <div class="title-content">
+              <input class="title-5" type="text" placeholder="Partido" enable>
+              
+            </div>
+            
+            <form [formGroup]="form" class="form" (submit)="submitForm()">
+                
+              <div class="time-couta">
+                
+      
+                  <h4 class="firsttime2"> Restante <br>{{showTime}} </h4>
+                
+                  <h4 class="firsttime2"> Goles <br>{{yF}} </h4> 
+                  
+                  <h4 class="firsttime2"> Esquinas <br>{{yFE}} </h4>
+                
+              </div>
+      
+              <mat-divider></mat-divider>
+              <div class="min-seg">
+                  <mat-form-field class="ancho" appearance="fill">
+                      <mat-label>Minuto</mat-label>
+                      <input type="number" class="primary " matInput autocomplete="off" formControlName="minutos" placeholder="minutos" min="70" max="89" maxlength="2">
+                    </mat-form-field>
+                  
+                  <mat-form-field class="ancho" appearance="fill">
+                      <mat-label>Segundo</mat-label>
+                      <input type="number" class="primary " matInput autocomplete="off" formControlName="segundos" placeholder="Segundo" min="0" max="59" maxlength="2">
+                    </mat-form-field>
+              </div>
+              <div class="goles-esquinas">
+                <div class="goles" appearance="fill">
+                  <label>Goles</label>
+                  <select class="form-select" style="background-color:#BDC2E0;" formControlName="golesEscogidos">
+                    <option *ngFor="let gol of arrayGoles" [value]="gol">
+                      {{gol}}
+                    </option>
+                  </select>
+                </div>
+      
+                <div class="esquina" appearance="fill">
+                  <label>Esquinas</label>
+                  <select matNativeControl class="form-select" style="background-color:#BDC2E0;" formControlName="golesMenosEsquinas">
+                    <option value="0">0</option>
+                    <option value="7">7</option>
+                    <option value="7.5">7.5</option>
+                    <option value="8">8</option>
+                    <option value="8.5">8.5</option>
+                    <option value="9">9</option>
+                    <option value="9.5">9.5</option>
+                    <option value="10">10</option>
+                    <option value="10.5">10.5</option>
+                    <option value="11">11</option>
+                  </select>
+                </div>
+      
+                <div class="extra" appearance="fill">
+                  <label>Extra</label>
+                  <select class="form-select" style="background-color:#BDC2E0;" formControlName="extraTime">
+                    <!-- <mat-option>0</mat-option> -->
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+              </div>
+      <br>
+              <button mat-raised-button color="primary" type="submit">{{actionBtn}}</button>
+              <!-- <button type="submit">{{actionBtn}}</button> -->
+              
+          
+          
+          </form>
+          </mat-card>
+    </div>
+</div>
