@@ -60,5 +60,49 @@
       font-size: 1rem;
       color: #666;
     }
+
+    .iconos {
+      display: flex;
+      justify-content: center;
+      // gap: 10px;
+      // margin-top: 10px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    padding: 10px;
+    gap: 10px;
+
+    .image-item {
+      max-width: 100%;
+      flex-direction: row;
+      align-items: flex-start;
+
+      .image-frame {
+        width: 150px;
+        height: 150px;
+        margin-right: 10px;
+
+        .hover-image {
+          width: 150px;
+          height: 150px;
+        }
+      }
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.7rem;
+      }
+    }
+  }
+  .image-container .image-item {
+    width: 100%;
   }
 }

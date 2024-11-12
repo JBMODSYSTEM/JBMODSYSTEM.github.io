@@ -112,3 +112,36 @@
     font-weight: bold;
     color: rgb(41, 41, 117);
 }
+
+// Estilos para dispositivos móviles
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .mat-card {
+    margin: 10px 0;
+  }
+
+  .mat-form-field {
+    width: 100%;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button-group button {
+    margin-bottom: 10px;
+  }
+
+  .title-4 {
+    font-size: 1.2em;
+  }
+
+  .show-time {
+    font-size: 1.5em;
+  }
+}

@@ -31,7 +31,7 @@ export class CalculadoratemporalComponent {
   selected = '0';
   icon: string = "edit";
 
-  // Data arrays
+  // Arreglos de datos
   dataMenosEsquinas: any[] = [
     { time: 1, 7: 0, 7.5: 0, 8: 0, 8.5: 0, 9: 0, 9.5: 0, 10: 0, 10.5: 0, 11: 0 },
     {},
@@ -79,6 +79,7 @@ export class CalculadoratemporalComponent {
   ];
 
   constructor(private fb: FormBuilder) {
+    // Inicializa el formulario con validaciones
     this.form = this.fb.group({
       minutos: [70, [Validators.required, Validators.min(70), Validators.max(89)]],
       golesEscogidos: ["0", Validators.required],
@@ -89,18 +90,19 @@ export class CalculadoratemporalComponent {
   }
 
   ngOnInit(): void {
+    // Llama a las funciones para poblar los arreglos
     this.getArrayGoles();
     this.getArrayMenosEsquinas();
   }
 
-  // Populate arrayGoles with sorted keys from datosDirectos
+  // Llena arrayGoles con las claves ordenadas de datosDirectos
   getArrayGoles() {
     let ob = this.datosDirectos[0];
     this.arrayGoles = Object.keys(ob).sort();
     this.arrayGoles.pop();
   }
 
-  // Populate arrayMenosEsquinas with sorted keys from dataMenosEsquinas
+  // Llena arrayMenosEsquinas con las claves ordenadas de dataMenosEsquinas
   getArrayMenosEsquinas() {
     let ob = this.dataMenosEsquinas[0];
     this.arrayMenosEsquinas = Object.keys(ob).sort();
@@ -109,13 +111,13 @@ export class CalculadoratemporalComponent {
     this.arrayMenosEsquinas.unshift(last);
   }
 
-  // Handle form submission
+  // Maneja el envío del formulario
   submitForm() {
     if (this.form.invalid) return;
     this.hallarGol();
   }
 
-  // Calculate goals and corners
+  // Calcula goles y esquinas
   hallarGol() {
     this.cambiarFlag();
     const x = 60;
@@ -197,12 +199,12 @@ export class CalculadoratemporalComponent {
     }, 1000);
   }
 
-  // Toggle flag value
+  // Cambia el valor de la bandera
   cambiarFlag() {
     this.flag = !this.flag;
   }
 
-  // Change the name and icon
+  // Cambia el nombre y el icono
   changeName() {
     let $inputTitle = document.querySelector(".title-4")!;
     if ($inputTitle.toggleAttribute("disabled")) {

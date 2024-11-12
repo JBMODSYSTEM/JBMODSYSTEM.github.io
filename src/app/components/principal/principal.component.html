@@ -1,4 +1,20 @@
-<div class="image-container">
+<div class="image-container" >
+  <div *ngFor="let image of images" class="image-item">
+    <div class="image-frame">
+      <img [src]="image.src" [alt]="image.alt" class="hover-image">
+    </div>
+    <div>
+      <h3><a [routerLink]="image.routerLink">{{ image.title }}</a></h3>
+      <p>{{ image.description }}       <span class="iconos">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M185.7 268.1h76.2l-38.1-91.6-38.1 91.6zM223.8 32L16 106.4l31.8 275.7 176 97.9 176-97.9 31.8-275.7zM354 373.8h-48.6l-26.2-65.4H168.6l-26.2 65.4H93.7L223.8 81.5z"/></svg>
+      </span>
+    </p>
+
+    </div>
+  </div>
+</div>
+
+<!-- <div class="image-container">
   <div class="image-item">
     <div class="image-frame">
       <img src="https://cdn.pixabay.com/photo/2024/09/22/09/39/pantheon-paris-9065570_1280.jpg" alt="Image 3" class="hover-image">
@@ -55,4 +71,5 @@
     <h3>Título 8</h3>
     <p>Descripción de la imagen 8.</p>
   </div>
-</div>
+</div> -->
+

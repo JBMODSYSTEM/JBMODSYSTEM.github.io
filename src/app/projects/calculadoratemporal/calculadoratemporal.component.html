@@ -78,12 +78,18 @@
                 </div>
               </div>
       <br>
-              <button mat-raised-button color="primary" type="submit">{{actionBtn}}</button>
-              <!-- <button type="submit">{{actionBtn}}</button> -->
+              <div class="button-group">
+                <button mat-raised-button color="primary" type="submit">{{ actionBtn }}</button>
+                <!-- <button mat-raised-button color="accent" type="button" (click)="changeName()">
+                  <mat-icon>{{ icon }}</mat-icon>
+                </button> -->
+              </div>
               
           
           
           </form>
           </mat-card>
     </div>
+    <div class="show-time">{{ showTime }}</div>
+    <div class="show-time">{{ showTime2 }}</div>
 </div>
