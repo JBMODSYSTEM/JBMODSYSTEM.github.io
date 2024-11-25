@@ -1,0 +1,35 @@
+<div mat-dialog-title class="title">
+    <h3>Contact form</h3>
+</div>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="content">
+        <div class="row">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>
+                    Name
+                </mat-label>
+                <input matInput type="text" formControlName="name">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>
+                    Email
+                </mat-label>
+                <input matInput type="text" formControlName="email">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>
+                    Phone
+                </mat-label>
+                <input matInput type="text" formControlName="phone" maxlength="10">
+            </mat-form-field>
+        </div>
+        <div mat-dialog-actions class="action">
+            <button mat-raised-button [mat-dialog-close]="false" type="button">Cancel</button>
+            <button [disabled]="!contactForm.valid" mat-raised-button [mat-dialog-close]="false" color="primary" type="submit">{{getTitle()}}</button>
+        </div>
+    </div>
+</form>

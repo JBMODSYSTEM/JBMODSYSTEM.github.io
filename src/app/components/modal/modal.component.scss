@@ -1,0 +1,45 @@
+.content {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Centrar el contenido horizontalmente
+}
+
+.title {
+  text-align: center; // Centrar el texto del título
+}
+
+.row {
+  display: flex;
+  gap: 20px; // Aumentar el espacio entre los inputs
+  justify-content: center; // Centrar los inputs horizontalmente
+
+  mat-form-field {
+    width: 300px;
+    .mat-input-element {
+      padding: 36px; // Cambiar el padding de los inputs
+      font-size: 18px; // Cambiar el tamaño de fuente de los inputs
+    }
+  }
+}
+
+.action {
+  padding: 0 35px 30px;
+  display: flex;
+  justify-content: center; // Centrar los botones horizontalmente
+
+  button {
+    flex: 1;
+    margin: 0 10px; // Añadir margen entre los botones
+    padding: 12px 20px; // Aumentar el padding de los botones
+    font-size: 18px; // Aumentar el tamaño de fuente de los botones
+  }
+}
+
+// Estilos personalizados para la ventana modal
+.custom-modal {
+  max-width: 700px; // Asegurarse de que la ventana modal no exceda este ancho
+  margin: 0 auto; // Centrar la ventana modal
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra tenue para la ventana modal
+}
+

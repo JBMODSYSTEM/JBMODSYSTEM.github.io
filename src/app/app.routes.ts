@@ -5,17 +5,12 @@ import { PeliculasComponent } from './projects/peliculas/peliculas.component';
 import { CalculadoratemporalComponent } from './projects/calculadoratemporal/calculadoratemporal.component';
 import { LoginComponent } from '@components/login/login.component';
 
-
-
 export const routes: Routes = [
-    { path: '', component: PrincipalComponent },
-    { path: 'compotas', component: CompotasComponent },
-    { path: 'login', component: LoginComponent }, 
-    { path: 'contacts', loadChildren: () => import('./features/contacts.routes')},
-    { path: 'calculadoratemp', component: CalculadoratemporalComponent },
-    { path: 'peliculas', component: PeliculasComponent},
-    { path: '**', redirectTo: '' }
-    
-    // { path: 'home', loadChildren: () => import('./home/home.').then(m => m.HomeModule) }
-  
+    { path: '', component: PrincipalComponent }, // Ruta por defecto
+    { path: 'compotas', component: CompotasComponent }, // Ruta para CompotasComponent
+    { path: 'login', component: LoginComponent }, // Ruta para LoginComponent
+    { path: 'contacts', loadChildren: () => import('./features/contacts/contacts.routes')}, // Carga perezosa de las rutas de contactos
+    { path: 'calculadoratemp', component: CalculadoratemporalComponent }, // Ruta para CalculadoratemporalComponent
+    { path: 'peliculas', component: PeliculasComponent}, // Ruta para PeliculasComponent
+    { path: '**', redirectTo: '' } // Ruta comodín para redirigir a la ruta por defecto
 ];
