@@ -23,7 +23,7 @@ export class ContactService {
     getAllContacts():Observable<Contact[]> {
         const queryFn = query(this._contactCollection, orderBy('created', 'desc'));
         return collectionData(queryFn, {idField: 'id'}) as Observable<Contact[]>
-      }
+    }
 
     async getContactById(id:string):Promise<Contact>{
         const docRef = this._getDocRef(id);

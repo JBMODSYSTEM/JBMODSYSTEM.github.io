@@ -15,10 +15,10 @@
   justify-content: center; // Centrar los inputs horizontalmente
 
   mat-form-field {
-    width: 300px;
+    width: 350px;
     .mat-input-element {
       padding: 36px; // Cambiar el padding de los inputs
-      font-size: 18px; // Cambiar el tamaño de fuente de los inputs
+      font-size: 16px; // Cambiar el tamaño de fuente de los inputs
     }
   }
 }

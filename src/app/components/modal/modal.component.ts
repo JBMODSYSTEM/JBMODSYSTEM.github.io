@@ -7,6 +7,7 @@ import { ContactService } from '@features/contacts/contact.service';
 import { ModalService } from './modal.service';
 import { APP_CONSTANTS } from '@shared/constants';
 import { MatButtonModule } from '@angular/material/button';
+import { SnackbarService } from '@shared/services/snack-bar.service';
 
 const MATERIAL_MODULES = [
   MatLabel, 
@@ -30,14 +31,12 @@ export class ModalComponent implements OnInit{
   private readonly _matDialog = inject(MAT_DIALOG_DATA);
   private readonly _contactSvc = inject(ContactService);
   private readonly _modalSvc = inject(ModalService);
+  private readonly _snackBarSvc = inject(SnackbarService);
   
 
   ngOnInit(): void {
     this._buildForm();
-    if(this._matDialog.isEditing){
-      this.contactForm.patchValue(this._matDialog.data);
-      this._disabledForm();
-    }
+    this.contactForm.patchValue(this._matDialog.data);
   }
 
   async onSubmit(): Promise<void> {
@@ -51,16 +50,12 @@ export class ModalComponent implements OnInit{
       await this._contactSvc.newContact(contact);
       message = APP_CONSTANTS.MESSAGES.CONTACT_ADDED;
     }
-    // show snackBar
-    console.log(message);
+    this._snackBarSvc.showSnackBar(message, 'ok');
     this._modalSvc.closeModal();
   }
 
   getTitle(): string {
     return this._matDialog.data ? 'Edit Contact' : 'New Contact';
-  }
-  private _disabledForm(): void {
-    this.contactForm.disable();
   }
 
   private _buildForm(): void {
