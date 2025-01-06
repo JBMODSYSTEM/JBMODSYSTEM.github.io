@@ -37,16 +37,16 @@ export class PrincipalComponent {
     },
     {
       src: 'https://cdn.pixabay.com/photo/2024/11/02/05/13/winter-9168141_1280.jpg',
-      alt: 'contactos',
-      title: 'Proyecto Contactos',
-      routerLink: '/contacts',
+      alt: 'Comentarios',
+      title: 'Proyecto Comentarios',
+      routerLink: '/comentarios',
       description: 'Descripción de la imagen 3.'
     },
     {
       src: 'https://cdn.pixabay.com/photo/2022/12/02/16/52/the-path-7631282_1280.jpg',
       alt: 'Image 4',
       title: 'Image 4',
-      routerLink: '/',
+      routerLink: '/todolist',
       description: 'Descripción de la imagen 4.'
     },
     {
