@@ -1,0 +1,46 @@
+.coin {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  transition: transform 4s;
+  margin-top: 20px; // Add margin to position the coin below the title
+
+  .coin-face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid black;
+  }
+
+  .coin-face-front {
+    background-color: yellow;
+    transform: translateZ(10px);
+  }
+
+  .coin-face-back {
+    background-color: blue;
+    transform: rotateY(180deg) translateZ(10px);
+  }
+
+  .coin-edge {
+    position: absolute;
+    width: 200px;
+    height: 20px;
+    background-color: red;
+    border: 2px solid black;
+    transform: rotateX(90deg) translateZ(100px);
+    transform-origin: center;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}

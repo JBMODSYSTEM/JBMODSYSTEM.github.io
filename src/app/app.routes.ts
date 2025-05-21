@@ -5,6 +5,7 @@ import { PeliculasComponent } from './projects/peliculas/peliculas.component';
 import { CalculadoratemporalComponent } from './projects/calculadoratemporal/calculadoratemporal.component';
 import { LoginComponent } from '@components/login/login.component';
 import { TodolistComponent } from './projects/todolist/todolist.component';
+import { MonedagComponent } from './projects/monedag/monedag.component';
 
 export const routes: Routes = [
     { path: '', component: PrincipalComponent }, // Ruta por defecto
@@ -14,5 +15,6 @@ export const routes: Routes = [
     { path: 'calculadoratemp', component: CalculadoratemporalComponent }, // Ruta para CalculadoratemporalComponent
     { path: 'peliculas', component: PeliculasComponent}, // Ruta para PeliculasComponent
     { path: 'todolist', component: TodolistComponent}, // Ruta para TodolistComponent
+    { path: 'monedag', component: MonedagComponent}, // Ruta para MonedagComponent
     { path: '**', redirectTo: '' } // Ruta comodín para redirigir a la ruta por defecto
 ];

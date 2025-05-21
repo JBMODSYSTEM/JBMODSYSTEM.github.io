@@ -53,7 +53,7 @@ export class PrincipalComponent {
       src: 'https://cdn.pixabay.com/photo/2022/06/07/16/22/drift-7248723_1280.jpg',
       alt: 'Image 5',
       title: 'Imagen 5',
-      routerLink: '/',
+      routerLink: '/monedag',
       description: 'Descripción de la imagen 5.'
     },
     {
